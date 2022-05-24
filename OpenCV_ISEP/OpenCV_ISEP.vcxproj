@@ -154,11 +154,9 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OPENCV_PATH)\sources\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="CannyEdgeDetection.cpp" />
-    <ClCompile Include="dilationErosion.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CannyEdgeDetection.h" />
-    <ClInclude Include="dilationErosion.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
