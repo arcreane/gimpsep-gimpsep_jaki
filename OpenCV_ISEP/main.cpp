@@ -23,7 +23,7 @@ int main(void)
         return -1;
     }
 
-    cout << "Tap 1 for erosion or 2 for dilation" << endl;
+    cout << "Tap 1 for Erosion \n 2 for Dilation \n 3 for Lighten or darken \n 4 for Rezising" << endl;
     cin >> numberToChose;
 
     if (numberToChose == 1)
@@ -36,16 +36,16 @@ int main(void)
         Dilation(src, dilation_size);
     }
 
-  cout << "enter a number for the contrast";
-	cin >> contrast;
-	cout << "enter a number for the scaleX";
-	cin >> scaleX;
-	cout << "enter a number for the scaleY";
-	cin >> scaleY;
+    else if (numberToChose == 3)
+    {
+        light_dark(src, contrast);
+    }
 
-	light_dark(src, contrast);
-	rezising(src, scaleX, scaleY);
-    
+    else if (numberToChose == 4)
+    {
+        rezising(src, scaleX, scaleY);
+    }
+
     waitKey(0);
     return 0;
 }

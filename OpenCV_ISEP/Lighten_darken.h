@@ -4,12 +4,16 @@
 using namespace cv;
 using namespace std;
 
-Mat src;
+
 float contrast;
 
 Mat light_dark(Mat src, float contrast)
 {
 	Mat newimage;
+
+	cout << "Tap a number";
+	cin >> contrast;
+
 	src.convertTo(newimage, -1, contrast, 0);
 	imshow("Light_dark", newimage);
 	return newimage;
