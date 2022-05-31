@@ -17,10 +17,10 @@ static void Stiching(String img){
     
     if (img == "newspaper") {
         // Load images
-        Mat img1 = imread("/Users/juliettegodinot/Desktop/newspaper1.jpg");
-        Mat img2 = imread("/Users/juliettegodinot/Desktop/newspaper2.jpg");
-        Mat img3 = imread("/Users/juliettegodinot/Desktop/newspaper3.jpg");
-        Mat img4 = imread("/Users/juliettegodinot/Desktop/newspaper4.jpg");
+        Mat img1 = imread("newspaper1.jpg");
+        Mat img2 = imread("newspaper2.jpg");
+        Mat img3 = imread("newspaper3.jpg");
+        Mat img4 = imread("newspaper4.jpg");
         
         imgs.push_back(img1);
         imgs.push_back(img2);
@@ -29,12 +29,12 @@ static void Stiching(String img){
         
     } else if (img == "hill") {
         // Load images
-        Mat img1 = imread("/Users/juliettegodinot/Desktop/boat1.jpg");
-        Mat img2 = imread("/Users/juliettegodinot/Desktop/boat2.jpg");
-        Mat img3 = imread("/Users/juliettegodinot/Desktop/boat3.jpg");
-        Mat img4 = imread("/Users/juliettegodinot/Desktop/boat4.jpg");
-        Mat img5 = imread("/Users/juliettegodinot/Desktop/boat5.jpg");
-        Mat img6 = imread("/Users/juliettegodinot/Desktop/boat6.jpg");
+        Mat img1 = imread("boat1.jpg");
+        Mat img2 = imread("boat2.jpg");
+        Mat img3 = imread("boat3.jpg");
+        Mat img4 = imread("boat4.jpg");
+        Mat img5 = imread("boat5.jpg");
+        Mat img6 = imread("boat6.jpg");
         
         imgs.push_back(img1);
         imgs.push_back(img2);
@@ -45,11 +45,13 @@ static void Stiching(String img){
         
     } else if (img == "beach") {
         // Load images
-        Mat img1 = imread("/Users/juliettegodinot/Desktop/beach1.jpg");
-        Mat img2 = imread("/Users/juliettegodinot/Desktop/beach2.jpg");
+        Mat img1 = imread("beach1.jpg");
+        Mat img2 = imread("beach2.jpg");
         
         imgs.push_back(img1);
         imgs.push_back(img2);
+    } else {
+        std::cout << "Pas d'image";
     }
     
     // Create a Stitcher class object with mode panoroma
