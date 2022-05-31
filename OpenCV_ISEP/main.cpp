@@ -1,31 +1,33 @@
-#include <opencv2/opencv.hpp>
+#include "opencv2/imgcodecs.hpp"
+#include "opencv2/highgui.hpp"
+#include "Lighten_darken.h"
+#include "Rezising.h"
+#include <iostream>
+
 
 using namespace std;
 using namespace cv;
 
+
 int main(void)
 {
-    Mat source, M, result;
+	Mat src;
+	src = imread("van_gogh.jpg", IMREAD_COLOR);
+	if (src.empty())
+	{
+		cout << "Pas d'image" << endl;
+		return -1;
+	}
 
-    // Reading the image
-    source = imread("van_gogh.jpg", IMREAD_COLOR);
+	cout << "enter a number for the contrast";
+	cin >> contrast;
+	cout << "enter a number for the scaleX";
+	cin >> scaleX;
+	cout << "enter a number for the scaleY";
+	cin >> scaleY;
 
-    Point2f center(source.cols / 2, source.rows / 2);
-    double rotationAngle = 30;
-    double scale = 1;
-
-    // Getting the matrix which will define the rotation
-    M = getRotationMatrix2D(center, rotationAngle, scale);
-    // Rotating the source and storing in result
-    warpAffine(source, result, M, Size());
-
-    // Create windows for display
-    namedWindow("Van Gogh - Original", WINDOW_AUTOSIZE);
-    namedWindow("Van Gogh - Rotated", WINDOW_AUTOSIZE);
-
-    // Display images
-    imshow("Van Gogh - Original", source);
-    imshow("Van Gogh - Rotated", result);
-    waitKey(0);
-
+	light_dark(src, contrast);
+	rezising(src, scaleX, scaleY);
+	waitKey(0);
+	return 0;
 }

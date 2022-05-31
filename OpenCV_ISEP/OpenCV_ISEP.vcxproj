@@ -149,7 +149,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Lighten_darken.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Rezising.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="van_gogh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Lighten_darken.h" />
+    <ClInclude Include="Rezising.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
