@@ -23,27 +23,79 @@ int main(void)
         return -1;
     }
 
-    cout << "Tap 1 for Erosion \n 2 for Dilation \n 3 for Lighten or darken \n 4 for Rezising" << endl;
+    cout << "Home menu \n 1 - Erosion \n 2 - Dilation \n 3 - Lighten or darken \n 4 - Rezising \n 5 - Quit" << endl;
     cin >> numberToChose;
 
     if (numberToChose == 1)
     {
         Erosion(src, erosion_size);
+        waitKey(0);
+        cout << " 1 - Go back to the menu \n 2 - Quit" << endl;
+        cin >> numberToChose;
+        if (numberToChose==1)
+        {
+            cout << "Home menu \n 1 - Erosion \n 2 - Dilation \n 3 - Lighten or darken \n 4 - Rezising \n 5 - Quit" << endl;
+            cin >> numberToChose;
+        }
+
+        else if (numberToChose == 2)
+        {
+            return 0;
+        }
     }
-    
-    else if (numberToChose==2)
+
+    else if (numberToChose == 2)
     {
         Dilation(src, dilation_size);
+        waitKey(0);
+        cout << " 1 - Go back to the menu \n 2 - Quit" << endl;
+        cin >> numberToChose;
+        if (numberToChose == 1)
+        {
+            cout << "Home menu \n 1 - Erosion \n 2 - Dilation \n 3 - Lighten or darken \n 4 - Rezising \n 5 - Quit" << endl;
+            cin >> numberToChose;
+        }
+
+        else if (numberToChose == 2)
+        {
+            return 0;
+        }
     }
 
     else if (numberToChose == 3)
     {
         light_dark(src, contrast);
+        waitKey(0);
+        cout << " 1 - Go back to the menu \n 2 - Quit" << endl;
+        cin >> numberToChose;
+        if (numberToChose == 1)
+        {
+            cout << "Home menu \n 1 - Erosion \n 2 - Dilation \n 3 - Lighten or darken \n 4 - Rezising \n 5 - Quit" << endl;
+            cin >> numberToChose;
+        }
+
+        else if (numberToChose == 2)
+        {
+            return 0;
+        }
     }
 
     else if (numberToChose == 4)
     {
         rezising(src, scaleX, scaleY);
+        waitKey(0);
+        cout << " 1 - Go back to the menu \n 2 - Quit" << endl;
+        cin >> numberToChose;
+        if (numberToChose == 1)
+        {
+            cout << "Home menu \n 1 - Erosion \n 2 - Dilation \n 3 - Lighten or darken \n 4 - Rezising \n 5 - Quit" << endl;
+            cin >> numberToChose;
+        }
+
+        else if (numberToChose == 2)
+        {
+            return 0;
+        }
     }
 
     waitKey(0);
