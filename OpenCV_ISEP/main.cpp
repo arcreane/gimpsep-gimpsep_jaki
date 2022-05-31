@@ -1,10 +1,26 @@
-#include <opencv2/opencv.hpp>
-#include "cannyedgedetection.h"
+//
+//  main.cpp
+//
+//  Created by Juliette Godinot on 24/05/2022.
+//
 
-using namespace std;
-using namespace cv;
+#include <iostream>
+#include "stitching.cpp"
 
-int main(void)
-{
-	src = imread("van_gogh.jpg", IMREAD_COLOR); // Load an image
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    //std::cout << "Hello, World!\n";
+    
+    String img;
+    
+    cout << "Choose between 'newspaper', 'boat' et 'beach'"; cin >> img;
+    
+    Stiching(img);
+   
+    namedWindow("Result", WINDOW_AUTOSIZE);
+    imshow("Result", pano);
+    
+    waitKey();
+    
+    return 0;
 }
