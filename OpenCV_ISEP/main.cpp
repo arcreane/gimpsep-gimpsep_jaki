@@ -2,11 +2,14 @@
 #include "opencv2/imgproc.hpp"
 #include <opencv2/highgui.hpp>
 #include "dilationErosion.h"
+#include "Lighten_darken.h"
+#include "Rezising.h"
 #include <iostream>
 
 
 using namespace std;
 using namespace cv;
+
 
 int numberToChose;
 
@@ -32,13 +35,18 @@ int main(void)
     {
         Dilation(src, dilation_size);
     }
+
+  cout << "enter a number for the contrast";
+	cin >> contrast;
+	cout << "enter a number for the scaleX";
+	cin >> scaleX;
+	cout << "enter a number for the scaleY";
+	cin >> scaleY;
+
+	light_dark(src, contrast);
+	rezising(src, scaleX, scaleY);
     
     waitKey(0);
     return 0;
 }
 
-
-
-	
-
-	

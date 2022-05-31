@@ -154,11 +154,15 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OPENCV_PATH)\sources\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="CannyEdgeDetection.cpp" />
+    <ClCompile Include="Lighten_darken.cpp" />
+    <ClCompile Include="Rezising.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CannyEdgeDetection.h" />
     <ClInclude Include="dilationErosion.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Lighten_darken.h" />
+    <ClInclude Include="Rezising.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="van_gogh.jpg" />
