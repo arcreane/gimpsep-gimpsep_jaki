@@ -25,9 +25,6 @@
     <ClCompile Include="CannyEdgeDetection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dilationErosion.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lighten_darken.h">
