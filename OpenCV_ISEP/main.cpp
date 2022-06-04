@@ -1,10 +1,15 @@
 #include <opencv2/opencv.hpp>
-#include "cannyedgedetection.h"
+#include "CannyEdgeDetection.h"
 
 using namespace std;
+#include "opencv2/imgproc.hpp"
+#include "opencv2/highgui.hpp"
+#include <iostream>
 using namespace cv;
 
-int main(void)
+int main(int argc, char** argv)
 {
-	src = imread("van_gogh.jpg", IMREAD_COLOR); // Load an image
+    CannyEdgeDetection(0,0);
+    waitKey(0);
+    return 0;
 }

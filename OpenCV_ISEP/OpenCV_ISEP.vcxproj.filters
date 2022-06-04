@@ -18,6 +18,9 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CannyEdgeDetectionMarchePas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="CannyEdgeDetection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -34,5 +37,13 @@
     <Image Include="van_gogh.jpg">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="landscape.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="chaplin.mp4">
+      <Filter>Resource Files</Filter>
+    </Media>
   </ItemGroup>
 </Project>

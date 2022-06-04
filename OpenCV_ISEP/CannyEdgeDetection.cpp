@@ -1,40 +1,51 @@
-#include <opencv2/opencv.hpp>
-#include "CannyEdgeDetection.h"
-
+#include "opencv2/imgproc.hpp"
+#include "opencv2/highgui.hpp"
+#include <iostream>
 using namespace std;
 using namespace cv;
 
-Mat src, src_gray;
-Mat dst, detected_edges;
-int lowThreshold = 0;
-const int max_lowThreshold = 100;
-const int ration = 3;
-const int kernel_size = 3;
-const char* window_name = "Edge Map";
 
-static void CannyThreshold(int, void*)
+
+void CannyEdgeDetection(int, void*)
 {
-    blur(src_gray, detected_edges, Size(3, 3));
-    Canny(detected_edges, detected_edges, lowThreshold, lowThreshold * ration, kernel_size);
-    dst = Scalar::all(0);
-    src.copyTo(dst, detected_edges);
-    imshow(window_name, dst);
-}
-int main(int argc, char** argv) {
-    //CommandLineParser parser(argc, argv, "{@input | fruits.jpg | input image}");
-    src = imread("van_gogh.jpg", IMREAD_COLOR); // Load an image
+
+    String image;
+    Mat src, src_gray;
+    Mat dst, detected_edges;
+    int lowThreshold = 0;
+    const int max_lowThreshold=100;
+    const int ratioThreshold = 3;
+    const int kernel_size = 3;
+
+    cout << "Select an image: Van Gogh - Wheat Field (enter 'van_gogh') | Landscape (enter 'landscape')\n" << endl;
+    cin >> image;
+    if (image == "van_gogh") {
+        src = imread("van_gogh.jpg", IMREAD_COLOR);
+    }
+    else if (image == "landscape") {
+        src = imread("landscape.jpg", IMREAD_COLOR);
+    }
+    else {
+        cout << "Veuillez insérer un nom d'image valable" << endl;
+    }
     if (src.empty())
     {
         std::cout << "Could not open or find the image!\n" << std::endl;
-        std::cout << "Usage: " << argv[0] << " <Input image>" << std::endl;
-        return -1;
     }
+
+    cout << "Select the threshold between 0 and 100\n" << endl;
+    cin >> lowThreshold;
+
     dst.create(src.size(), src.type());
     cvtColor(src, src_gray, COLOR_BGR2GRAY);
-    namedWindow(window_name, WINDOW_AUTOSIZE);
-    createTrackbar("Min Threshold:", window_name, &lowThreshold, max_lowThreshold, CannyThreshold);
-    CannyThreshold(0, 0);
-    waitKey(0);
-    return 0;
+    namedWindow("Canny Edge Detection", WINDOW_NORMAL);
+    //createTrackbar("Min Threshold:", "Canny Edge Detection", &lowThreshold, max_lowThreshold, CannyEdgeDetection);
 
+
+    //Calling function
+    blur(src_gray, detected_edges, Size(3, 3));
+    Canny(detected_edges, detected_edges, lowThreshold, lowThreshold * ratioThreshold, kernel_size);
+    dst = Scalar::all(0);
+    src.copyTo(dst, detected_edges);
+    imshow("Canny Edge Detection", dst);
 }

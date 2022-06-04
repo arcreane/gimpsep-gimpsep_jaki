@@ -153,6 +153,7 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OPENCV_PATH)\sources\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OPENCV_PATH)\sources\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="CannyEdgeDetectionMarchePas.cpp" />
     <ClCompile Include="CannyEdgeDetection.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -160,7 +161,11 @@
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="landscape.jpg" />
     <Image Include="van_gogh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="chaplin.mp4" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
