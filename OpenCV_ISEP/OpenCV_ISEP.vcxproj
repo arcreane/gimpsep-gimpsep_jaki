@@ -156,6 +156,7 @@
     <ClCompile Include="CannyEdgeDetection.cpp" />
     <ClCompile Include="Lighten_darken.cpp" />
     <ClCompile Include="Rezising.cpp" />
+    <ClCompile Include="stitching.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CannyEdgeDetection.h" />
@@ -163,9 +164,26 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="Lighten_darken.h" />
     <ClInclude Include="Rezising.h" />
+    <ClInclude Include="stitching.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="beach1.jpg" />
+    <Image Include="beach2.jpg" />
+    <Image Include="boat1.jpg" />
+    <Image Include="boat2.jpg" />
+    <Image Include="boat3.jpg" />
+    <Image Include="boat4.jpg" />
+    <Image Include="boat5.jpg" />
+    <Image Include="boat6.jpg" />
+    <Image Include="..\..\..\..\..\Downloads\newspaper1.jpg" />
+    <Image Include="..\..\..\..\..\Downloads\newspaper2.jpg" />
+    <Image Include="..\..\..\..\..\Downloads\newspaper3.jpg" />
+    <Image Include="..\..\..\..\..\Downloads\newspaper4.jpg" />
+    <Image Include="objects.jpg" />
     <Image Include="van_gogh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="chaplin.mp4" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

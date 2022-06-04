@@ -1,2 +1,2 @@
-//#pragma once
-//int TP2(String image);
+#pragma once
+Mat CannyEdgeDetection(int, void*, Mat);

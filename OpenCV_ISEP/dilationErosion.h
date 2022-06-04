@@ -18,7 +18,7 @@ Mat Erosion(Mat src,int erosion_size)
     int erosion_type = MORPH_ELLIPSE; 
     //int erosion_type = MORPH_CROSS;
     //erosion_type = MORPH_RECT;
-    cout << "enter a number for erosion";
+    cout << "Enter a number for erosion (between 1 and 50)\n";
     cin >> erosion_size;
     Mat element = getStructuringElement(erosion_type,
         Size(2 * erosion_size + 1, 2 * erosion_size + 1),
@@ -34,7 +34,7 @@ Mat Dilation(Mat src,int dilation_size)
     int dilation_type = MORPH_ELLIPSE; 
     //int dilation_type = MORPH_CROSS;
     //int dilation_type =MORPH_RECT;
-    cout << "enter a number for dilation";
+    cout << "Enter a number for dilation (between 1 and 50)\n";
     cin >> dilation_size;
     Mat element = getStructuringElement(dilation_type,
         Size(2 * dilation_size + 1, 2 * dilation_size + 1),
