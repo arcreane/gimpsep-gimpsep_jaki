@@ -35,7 +35,7 @@ int main(void){
         srcO = imread("HappyFish.jpg", IMREAD_COLOR);
     }
     else {
-        cout << "Veuillez insérer un nom d'image valable" << endl;
+        cout << "Please enter a valid name for your image" << endl;
     }
     if (srcO.empty())
     {
