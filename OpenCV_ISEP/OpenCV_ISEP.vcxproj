@@ -167,6 +167,7 @@
     <ClInclude Include="stitching.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\..\..\AppData\Local\Temp\HappyFish.jpg" />
     <Image Include="beach1.jpg" />
     <Image Include="beach2.jpg" />
     <Image Include="boat1.jpg" />

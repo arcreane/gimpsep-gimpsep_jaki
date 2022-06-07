@@ -13,27 +13,30 @@
 using namespace cv;
 
 int main(void){
-	Mat src;
+	Mat srcO, src;
     int numberToChose = 0;
     String image, confirm;
 
-    cout << "Select an image: Van Gogh - Wheat Field (enter 'van_gogh') | Some objects (enter 'objects')\n" << endl;
+    cout << "Select an image: Van Gogh - Wheat Field (enter 'van_gogh') | Some objects (enter 'objects') | Happy Fish (enter 'fish') \n" << endl;
     cin >> image;
     if (image == "van_gogh") {
-        src = imread("van_gogh.jpg", IMREAD_COLOR);
+        srcO = imread("van_gogh.jpg", IMREAD_COLOR);
     }
     else if (image == "objects") {
-        src = imread("objects.jpg", IMREAD_COLOR);
+        srcO = imread("objects.jpg", IMREAD_COLOR);
+    }
+    else if (image == "fish") {
+        srcO = imread("HappyFish.jpg", IMREAD_COLOR);
     }
     else {
         cout << "Veuillez insérer un nom d'image valable" << endl;
     }
-    if (src.empty())
+    if (srcO.empty())
     {
         cout << "Could not open or find the image!\n" << endl;
         return -1;
     }
-    
+    src = srcO;
     do{
         Mat newImg;
         cout << "Home menu \n 1 - Erosion \n 2 - Dilation \n 3 - Lighten or darken \n 4 - Rezising \n 5 - Canny Edge Detecting \n 6 - Stiching another image \n 0 - Quit" << endl;
@@ -82,12 +85,18 @@ int main(void){
 
             
         }*/
-        cout << "Do you want to continue using this image (yes) or start from scratch (no) ?" << endl;
-        cin >> confirm;
-        if (confirm == "yes") {
-            src = newImg;
+        if (numberToChose != 0) {
+            cout << "Do you want to continue using this image (yes) or start from scratch (no) ?" << endl;
+            cin >> confirm;
+            if (confirm == "yes") {
+                src = newImg;
+            }
+            else if(confirm == "no") {
+                src = srcO;
+            }
+            waitKey(0);
         }
-        waitKey(0);
+
     } while (numberToChose != 0);
 
     return 0;

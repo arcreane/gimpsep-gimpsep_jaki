@@ -30,6 +30,7 @@
     <Image Include="..\..\..\..\..\Downloads\newspaper2.jpg" />
     <Image Include="..\..\..\..\..\Downloads\newspaper3.jpg" />
     <Image Include="..\..\..\..\..\Downloads\newspaper4.jpg" />
+    <Image Include="..\..\..\..\AppData\Local\Temp\HappyFish.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="chaplin.mp4" />

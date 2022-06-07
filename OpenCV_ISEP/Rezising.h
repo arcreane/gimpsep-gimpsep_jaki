@@ -13,8 +13,8 @@ double scaleY;
 
 Mat rezising(Mat src, double scaleX, double scaleY)
 {
-	cout << "Current image width : " << src.size().width << endl;
 	cout << "Current image height: " << src.size().height << endl;
+	cout << "Current image width : " << src.size().width << endl;
 
 	cout << "Choose the height\n";
 	cin >> scaleX;
@@ -22,6 +22,6 @@ Mat rezising(Mat src, double scaleX, double scaleY)
 	cin >> scaleY;
 
 	// Scaling the image by dimension
-	cv::resize(src, resized_src, Size(), scaleX, scaleY, INTER_LINEAR);
+	resize(src, resized_src, Size(), scaleX, scaleY, INTER_LINEAR);
 	return resized_src;
 }
