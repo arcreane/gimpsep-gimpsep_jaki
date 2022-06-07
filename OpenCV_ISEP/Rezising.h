@@ -16,9 +16,9 @@ Mat rezising(Mat src, double scaleX, double scaleY)
 	cout << "Current image height: " << src.size().height << endl;
 	cout << "Current image width : " << src.size().width << endl;
 
-	cout << "Choose the height\n";
+	cout << "Choose the multiplicator factor to modify the height of the image: ";
 	cin >> scaleX;
-	cout << "Choose the width\n";
+	cout << "Choose the multiplicator factor to modify the width of the image: ";
 	cin >> scaleY;
 
 	// Scaling the image by dimension
