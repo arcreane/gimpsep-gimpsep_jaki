@@ -17,15 +17,21 @@ int main(void){
     int numberToChose = 0;
     String image, confirm;
 
-    cout << "Select an image: Van Gogh - Wheat Field (enter 'van_gogh') | Some objects (enter 'objects') | Happy Fish (enter 'fish') \n" << endl;
+    /*cout << "Select an image: Van Gogh - Wheat Field (enter 'van_gogh') | Some objects (enter 'objects') | Happy Fish (enter 'fish') \n" << endl;*/
+    cout << "_-_ Select an image:  _-_-_-_-_-_-_-_-_-_-_-_-_-_" << endl;
+    cout << "_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_" << endl;
+    cout << "_-  1 : Van Gogh - Wheat Field                 -_" << endl;
+    cout << "_-  2 : 0bjects                                -_" << endl;
+    cout << "_-  3 : Happy Fish                             -_" << endl;
+    cout << "_-_ Type your choice : -_-_-_-_-_-_-_-_-_-_-_-_-_" << endl;
     cin >> image;
-    if (image == "van_gogh") {
+    if (image == "1") {
         srcO = imread("van_gogh.jpg", IMREAD_COLOR);
     }
-    else if (image == "objects") {
+    else if (image == "2") {
         srcO = imread("objects.jpg", IMREAD_COLOR);
     }
-    else if (image == "fish") {
+    else if (image == "3") {
         srcO = imread("HappyFish.jpg", IMREAD_COLOR);
     }
     else {
@@ -39,7 +45,17 @@ int main(void){
     src = srcO;
     do{
         Mat newImg;
-        cout << "Home menu \n 1 - Erosion \n 2 - Dilation \n 3 - Lighten or darken \n 4 - Rezising \n 5 - Canny Edge Detecting \n 6 - Stiching another image \n 0 - Quit" << endl;
+        /*cout << "Home menu \n 1 - Erosion \n 2 - Dilation \n 3 - Lighten or darken \n 4 - Rezising \n 5 - Canny Edge Detecting \n 6 - Stiching another image \n 0 - Quit" << endl;*/
+        cout << "\n_-_ Home Menu  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_" << endl;
+        cout << "_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_" << endl;
+        cout << "_-  1 : Erosion                                -_" << endl;
+        cout << "_-  2 : Dilatation                             -_" << endl;
+        cout << "_-  3 : Lighten or darken                      -_" << endl;
+        cout << "_-  4 : Resizing                               -_" << endl;
+        cout << "_-  5 : Canny Edge Detecting                   -_" << endl;
+        cout << "_-  6 : Stiching another image                 -_" << endl;
+        cout << "_-  0 : Exit                                   -_" << endl;
+        cout << "_-_ Type your choice : -_-_-_-_-_-_-_-_-_-_-_-_-_" << endl;
         cin >> numberToChose;
 
         if (numberToChose == 1)
