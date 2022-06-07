@@ -6,12 +6,8 @@ using namespace cv;
 using namespace std;
 
 Mat src, erosion_dst, dilation_dst;
-int erosion_elem = 0;
 int erosion_size;
-int dilation_elem = 0;
 int dilation_size;
-//int const max_elem = 2;
-//int const max_kernel_size = 21;
 
 Mat Erosion(Mat src,int erosion_size)
 {
