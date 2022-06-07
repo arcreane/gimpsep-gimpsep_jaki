@@ -61,6 +61,7 @@ int main(void){
         if (numberToChose == 1)
         {
             newImg = Erosion(src, erosion_size);
+            //imshow("Image not modified", srcO);
             waitKey(0);
         }
 
@@ -101,6 +102,7 @@ int main(void){
 
             
         }*/
+
         if (numberToChose != 0) {
             cout << "Do you want to continue using this image (yes) or start from scratch (no) ?" << endl;
             cin >> confirm;
@@ -112,6 +114,7 @@ int main(void){
             }
             waitKey(0);
         }
+
 
     } while (numberToChose != 0);
 

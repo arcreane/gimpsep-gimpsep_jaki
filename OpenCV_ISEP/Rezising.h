@@ -21,6 +21,8 @@ Mat rezising(Mat src, double scaleX, double scaleY)
 	cout << "Choose the multiplicator factor to modify the width of the image: ";
 	cin >> scaleY;
 
+	//imshow("Image not modified", src);
+
 	// Scaling the image by dimension
 	resize(src, resized_src, Size(), scaleX, scaleY, INTER_LINEAR);
 	return resized_src;
