@@ -21,7 +21,7 @@ Mat CannyEdgeDetection(int, void*, Mat src)
 
     dst.create(src.size(), src.type());
     cvtColor(src, src_gray, COLOR_BGR2GRAY);
-    namedWindow("Edges Detected image", WINDOW_NORMAL);
+    namedWindow("Edges Detected image", WINDOW_AUTOSIZE);
     //createTrackbar("Min Threshold:", "Canny Edge Detection", &lowThreshold, max_lowThreshold, CannyEdgeDetection);
 
 

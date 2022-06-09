@@ -14,6 +14,6 @@ Mat light_dark(Mat src, float contrast)
 	cin >> contrast;
 
 	src.convertTo(newimage, -1, contrast, 0);
-	imshow("Light_dark", newimage);
+	//imshow("Light_dark", newimage);
 	return newimage;
 }

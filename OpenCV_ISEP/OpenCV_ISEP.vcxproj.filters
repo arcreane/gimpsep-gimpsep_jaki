@@ -3,9 +3,6 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="CannyEdgeDetection.cpp" />
-    <ClCompile Include="Lighten_darken.cpp" />
-    <ClCompile Include="Rezising.cpp" />
-    <ClCompile Include="stitching.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CannyEdgeDetection.h" />

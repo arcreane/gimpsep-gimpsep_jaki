@@ -21,7 +21,7 @@ Mat Erosion(Mat src,int erosion_size)
         Point(erosion_size, erosion_size));
     namedWindow("Erosion", WINDOW_AUTOSIZE);
     erode(src, erosion_dst, element);
-    imshow("Erosion", erosion_dst);
+    //imshow("Erosion", erosion_dst);
     return erosion_dst;
 }
 
@@ -38,6 +38,6 @@ Mat Dilation(Mat src,int dilation_size)
     namedWindow("Dilation", WINDOW_AUTOSIZE);
     moveWindow("Dilation", src.cols, 0);
     dilate(src, dilation_dst, element);
-    imshow("Dilation", dilation_dst);
+    //imshow("Dilation", dilation_dst);
     return dilation_dst;
 }
