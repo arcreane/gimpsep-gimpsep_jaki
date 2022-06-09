@@ -1,4 +1,3 @@
-//  stitching.h
 
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
@@ -77,5 +76,3 @@ static void Stiching(String img) {
     namedWindow("Stitched Image", WINDOW_NORMAL);
     resizeWindow("Stitched Image", pano.size().width, pano.size().height);
     imshow("Stitched Image", pano);
-
-}
